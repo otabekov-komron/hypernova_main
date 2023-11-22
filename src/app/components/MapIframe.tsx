@@ -3,6 +3,7 @@ import React from 'react';
 interface IframeMapProps {
   src: string;
   width?: number | string;
+  rel: string;
   height?: number | string;
   allowFullScreen?: boolean;
   loading?: 'lazy' | 'eager';
@@ -12,6 +13,7 @@ interface IframeMapProps {
 const IframeMap: React.FC<IframeMapProps> = ({
   src,
   width = '100%',
+  rel='preconnect',
   height = 450,
   allowFullScreen = true,
   loading = 'lazy',
@@ -19,6 +21,7 @@ const IframeMap: React.FC<IframeMapProps> = ({
 }) => {
   return (
     <iframe
+    rel="preconnect"
     className='rounded-[20px] '
       src={src}
       width={width}

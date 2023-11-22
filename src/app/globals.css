@@ -12,6 +12,10 @@
 
 body{
   background: #10002B;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .main{
     display: grid;

@@ -22,6 +22,8 @@ const config: Config = {
       black: '900',
     },
     screens: {
+      'xs': '340px',
+      // => @media (min-width: 340px) { ... }
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -58,6 +60,9 @@ const config: Config = {
       },
       borderRadius: {
         'button': '20px',
+      },
+      gridTemplateColumns: {
+        'main': '0.6fr, 1fr',
       }
     }
   },

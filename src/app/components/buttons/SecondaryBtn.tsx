@@ -8,7 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 // Button component allowing img and p tags inside
 const SecondaryBtn: React.FC<ButtonProps> = ({ children, ...buttonProps }) => {
   return (
-    <button className='text-secondary1  bg-[#EBD9FC] rounded-button py-[12px] px-[20px] flex items-center gap-[8px]' {...buttonProps}>
+    <button className='text-secondary1  bg-[#EBD9FC] xs:rounded-[10px] lg:rounded-button xs:py-[6px] lg:py-[12px] lg:px-[20px] xs:px-[10px] flex items-center gap-[8px]' {...buttonProps}>
       {children}
     </button>
   );
