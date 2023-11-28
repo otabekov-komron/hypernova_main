@@ -3,6 +3,11 @@ import PrimaryBtn from "./components/buttons/PrimaryBtn";
 import SecondaryBtn from "./components/buttons/SecondaryBtn";
 import { main, text } from "@/assets/images";
 import AboutUs from "./components/AboutUs";
+import Services from "./components/Services";
+import PortfolioSection from "./components/PortfolioSection";
+import Clients from "./components/Clients";
+import ContactForm from "./components/ContactForm";
+import Roadmap from "./components/Roadmap";
 export default function Home() {
   return (
     <div className="home">
@@ -67,12 +72,14 @@ export default function Home() {
             <Image
               className="lg:w-fit xs:w-[70%] xs:pt-10"
               src={text}
+              priority={true}
               alt="hypernova text"
             />
             <div>
               <Image
                 className="relative xs:bottom-10 lg:bottom-14 w-full"
                 src={main}
+                priority={true}
                 alt="main image"
               />
             </div>
@@ -126,8 +133,9 @@ export default function Home() {
         </svg>
       </div>
       <div>
-        <svg
-          className="xs:hidden lg:block opacity-10 -z-10 absolute top-[55vw]"
+       <div className="xs:hidden lg:flex opacity-20 -z-10 absolute top-[60vw]">
+       <svg
+          
           xmlns="http://www.w3.org/2000/svg"
           width="379"
           height="677"
@@ -197,7 +205,88 @@ export default function Home() {
             </linearGradient>
           </defs>
         </svg>
+       </div>
         <AboutUs />
+        <Services />
+        <div className="xs:hidden lg:flex justify-end relative bottom-[40vw]  opacity-20 -z-10 ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="409"
+            height="697"
+            viewBox="0 0 409 697"
+            fill="none"
+          >
+            <path
+              d="M6.81195 277.607C126.962 97.3074 298.384 12.0054 424.423 58.4497C450.809 68.1796 491.079 89.5204 530.158 141.741C491.788 100.505 454.428 84.183 429.621 76.9746C314.146 43.3914 171.229 119.836 74.1744 269.723L6.81195 277.607Z"
+              fill="url(#paint0_linear_448_1218)"
+            />
+            <path
+              d="M0.124512 451.44C2.08681 468.876 14.2636 562.377 91.9893 618.287C136.463 650.271 181.012 654.577 199.487 656.117C293.693 663.981 362.766 609.914 381.815 593.896C298.564 645.96 198.459 642.772 131.807 587.68C71.4504 537.802 60.7572 463.772 58.5428 444.602L0.124512 451.44Z"
+              fill="url(#paint1_linear_448_1218)"
+            />
+            <path
+              d="M637.359 376.85C615.861 431.26 565.135 535.719 456.344 610.54C411.662 641.272 274.411 735.662 143.476 678.158C88.4617 654.005 54.1608 611.634 35.6044 583.726C55.1923 607.77 88.6154 641.182 138.005 658.668C262.199 702.649 383.14 609.037 423.892 577.499C504.93 514.773 547.651 436.215 569.473 384.797L637.372 376.849L637.359 376.85Z"
+              fill="url(#paint2_linear_448_1218)"
+            />
+            <path
+              d="M637.589 204.447C632.132 184.727 596.548 63.2122 486.311 17.2746C420.462 -10.1607 359.788 2.62329 331.05 9.08403C196.026 39.4443 100.565 153.556 102.072 155.534C102.887 156.61 171.96 69.3793 291.189 41.3257C336.526 30.6599 415.226 13.8269 485.4 62.9594C553.754 110.81 569.908 190.826 573.451 211.281C594.827 209.008 616.214 206.72 637.589 204.447Z"
+              fill="url(#paint3_linear_448_1218)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_448_1218"
+                x1="0.124512"
+                y1="348.379"
+                x2="637.589"
+                y2="348.379"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#8D4B9D" />
+                <stop offset="1" stopColor="#4C1769" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_448_1218"
+                x1="637.612"
+                y1="333.953"
+                x2="0.124512"
+                y2="333.953"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#8D4B9D" />
+                <stop offset="1" stopColor="#4C1769" />
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_448_1218"
+                x1="602.572"
+                y1="346.372"
+                x2="-37.4584"
+                y2="346.372"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#854496" />
+                <stop offset="1" stopColor="#612C8B" />
+              </linearGradient>
+              <linearGradient
+                id="paint3_linear_448_1218"
+                x1="65.2714"
+                y1="151.444"
+                x2="591.515"
+                y2="94.5625"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#8D4B9D" />
+                <stop offset="1" stopColor="#4C1769" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="lg:-mt-[35vw] ">
+          <PortfolioSection />
+        </div>
+        <Clients/>
+        <ContactForm/>
+        <Roadmap/>
       </div>
     </div>
   );

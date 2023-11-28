@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import IframeMap from "./components/MapIframe";
 import { logo } from "@/assets/images";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "HyperNova",
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head></head>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Other meta tags, title, etc., can be added here */}
+      </Head>
       <body className="font-greycliff text-mainWhite">
         <nav className=" flex justify-between px-[6%]  items-center">
           <Link href="/">

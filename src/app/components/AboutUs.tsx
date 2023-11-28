@@ -8,9 +8,9 @@ const AboutUs = () => {
   return (
     <div className="flex flex-col px-[6%] xs:-mt-24 lg:-mt-32 mb-10 xs:z-10">
       <p className="xs:z-10 xs:text-[20px] lg:text-[40px] font-medium capitalize">About us</p>
-      <div className="grid lg:grid-cols-2 lg:gap-8 xs:gap-6">
+      <div className="grid lg:grid-cols-2 lg:gap-10 xs:gap-6">
         <div className="flex flex-col xs:text-[14px] lg:text-[20px] xs:gap-6 lg:gap-0 pt-10">
-          <span className="flex gap-4 lg:border-y-2 border-[#FBFAFF4D] lg:py-10">
+          <span className="flex gap-4 lg:border-y-2 border-[#fbfaff1c] lg:py-6">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const AboutUs = () => {
               <b>HyperNova</b> any complexity in all areas of IT offers to use.
             </p>
           </span>
-          <span className="flex gap-4 lg:border-b-2 border-[#FBFAFF4D] lg:py-10">
+          <span className="flex gap-4 lg:border-b-2 border-[#fbfaff1c] lg:py-6">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const AboutUs = () => {
               eager to use.
             </p>
           </span>
-          <span className="flex gap-4 lg:py-10 lg:mb-10">
+          <span className="flex gap-4 lg:py-6 lg:mb-10">
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -135,12 +135,14 @@ const AboutUs = () => {
         </div>
         <div className="grid grid-cols-2 w-full place-content-between lg:gap-6 xs:gap-3">
           <Image
-            className="object-cover xs:h-[200px] lg:h-[70vmin] rounded-button"
+            className="object-cover xs:h-[200px] lg:h-[55vmin] rounded-button"
             src={about2}
+            priority={true}
             alt="about image"
           />
           <Image
-            className="object-cover xs:h-[200px]  lg:h-[70vmin] rounded-button"
+            className="object-cover xs:h-[200px]  lg:h-[55vmin] rounded-button"
+            priority={true}
             src={about}
             alt="about image"
           />
@@ -175,7 +177,7 @@ const AboutUs = () => {
             <span className="lg:w-[70%] xs:w-[80%]">we show quick solutions</span>
           </div>
 
-          <div className="flex bg-orange xs:rounded-[10px] lg:rounded-button justify-evenly items-center xs:text-[10px] lg:text-[14px] w-full px-1 lg:py-6">
+          <div className="flex bg-orange xs:rounded-[10px] lg:rounded-button justify-evenly items-center xs:text-[10px] lg:text-[14px] w-full px-1 xs:py-2 lg:py-6">
             <span>
               
               <svg

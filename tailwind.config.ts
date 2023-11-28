@@ -24,20 +24,21 @@ const config: Config = {
     screens: {
       'xs': '340px',
       // => @media (min-width: 340px) { ... }
-      'sm': '640px',
+      'sm': '40em',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      'md': '48em',
       // => @media (min-width: 768px) { ... }
 
-      'lg': '1024px',
+      'lg': '64em',
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1280px',
+      'xl': '80em',
       // => @media (min-width: 1280px) { ... }
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+      '3xl': '1780px'
     },
     colors: {
       'secondary1': '#10002B',

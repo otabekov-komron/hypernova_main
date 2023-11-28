@@ -6,3 +6,4 @@ export const about: string = require('./about.webp').default;
 export const about2: string = require('./about2.webp').default;
 export const text: string = require('./text.webp').default;
 export const ofiyat: string = require('./ofiyat.webp').default;
+export const evomed: string = require('./evomed.webp').default;

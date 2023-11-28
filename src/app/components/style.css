@@ -1,0 +1,78 @@
+.circle {
+  width: 20px;
+  height: 20px;
+  background: #ebd9fc;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+}
+.progress-bar-left {
+  width: 300px;
+  height: 5px;
+  margin-left: -2px;
+  background: #ff6200;
+}
+.percentage-left {
+  display: block;
+  height: 100%;
+  background-color: #ebd9fc;
+}
+.progress-bar-right {
+  width: 300px;
+  height: 5px;
+  background: #ebd9fc;
+}
+.percentage-right {
+  display: block;
+  height: 100%;
+  background-color: #ff6200;
+}
+.inner {
+  box-shadow: 12px 10px 20px 0px rgba(36, 0, 70, 0.35) inset;
+}
+.inner:hover{
+  cursor: pointer;
+}
+.speech {
+  font-size: 14px;
+  position: relative;
+  color: #fbfaff;
+  background: #ff6200;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 300px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.speech::after {
+  display: block;
+  width: 0;
+  content: "";
+  border: 15px solid transparent;
+}
+
+.speech.left::after {
+  border-right-color: #ff6200;
+  border-left: 0;
+}
+
+.speech::after {
+  position: absolute;
+}
+.speech.left::after {
+  left: -14px;
+  top: calc(50% - 15px);
+}
+.speech.right::after {
+  border-left-color: #ff6200;
+  border-right: 0;
+}
+.speech.right::after {
+  right: -14px;
+  top: calc(50% - 15px);
+}
