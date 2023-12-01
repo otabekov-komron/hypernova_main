@@ -53,8 +53,7 @@ const Step1 = () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="42"
-          height="42"
+          className="xs:w-[30px] lg:w-[42px] xs:h-[30px] lg:h-[42px]"
           viewBox="0 0 42 42"
           fill="none"
         >

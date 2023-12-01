@@ -11,7 +11,7 @@ const Services = () => {
         what we offer
       </p>
       <div className="grid grid-cols-2 xs:gap-4 lg:gap-10">
-        <div className="flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
+        <div className="hover:bg-[#EBD9FC] hover:cursor-pointer ease-out transition-all flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
           <div className="flex flex-col gap-4 ">
             <p className="xs:text-[14px] lg:text-[20px] text-secondary3 capitalize font-medium">
               application development
@@ -54,7 +54,7 @@ const Services = () => {
             </svg>
           </span>
         </div>
-        <div className="flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
+        <div className="hover:bg-[#EBD9FC] hover:cursor-pointer ease-out transition-all flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
           <div className="flex flex-col gap-4 ">
             <p className="xs:text-[14px] lg:text-[20px] text-secondary3 capitalize font-medium">
               CRM systems
@@ -87,7 +87,7 @@ const Services = () => {
             </svg>
           </span>
         </div>
-        <div className="flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
+        <div className="hover:bg-[#EBD9FC] hover:cursor-pointer ease-out transition-all flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
           <div className="flex flex-col gap-4 ">
             <p className="xs:text-[14px] lg:text-[20px] text-secondary3 capitalize font-medium">
               business automation
@@ -113,7 +113,7 @@ const Services = () => {
             </svg>
           </span>
         </div>
-        <div className="flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
+        <div className="hover:bg-[#EBD9FC] hover:cursor-pointer ease-out transition-all flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
           <div className="flex flex-col gap-4 ">
             <p className="xs:text-[14px] lg:text-[20px] text-secondary3 capitalize font-medium">
               unique style
@@ -143,7 +143,7 @@ const Services = () => {
             </svg>
           </span>
         </div>
-        <div className="flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
+        <div className="hover:bg-[#EBD9FC] hover:cursor-pointer ease-out transition-all flex xs:items-center lg:items-start justify-between w-full bg-[#FBFAFF] rounded-button lg:gap-20 text-secondary3 lg:p-10 xs:p-3">
           <div className="flex flex-col gap-4 ">
             <p className="xs:text-[14px] lg:text-[20px] text-secondary3 capitalize font-medium">
               artificial intelligence

@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="lg:grid xs:flex xs:flex-col-reverse xs:gap-6 lg:gap-0  lg:grid-cols-2 px-[6%] xs:mt-24 lg:mt-44">
+    <div className="lg:grid xs:flex xs:flex-col-reverse xs:gap-6 lg:gap-0  lg:grid-cols-2 px-[6%] xs:my-24 lg:my-24">
       <div className="bg-mainWhite text-secondary2 xs:pt-5 lg:pt-10 xs:rounded-button lg:rounded-s-button ">
         <b className="xs:text-[30px] lg:text-[64px] xs:p-5 lg:p-10">Contact us</b>
         <div className="flex flex-col xs:p-5 lg:p-10 xs:text-[14px] lg:text-[24px]">

@@ -52,8 +52,7 @@ const Step6 = () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="42"
-          height="42"
+          className="xs:w-[30px] lg:w-[42px] xs:h-[30px] lg:h-[42px]"
           viewBox="0 0 42 42"
           fill="none"
         >
@@ -80,11 +79,11 @@ const Step6 = () => {
       <div
         className={`${
           isMobile
-            ? "visible opacity-100"
+            ? "visible opacity-100 left"
             : showStep6
             ? "opacity-100"
             : "opacity-0 invisible"
-        } bg-gray-200 p-4 lg:mr-24 xs:-ml-4 speech lg:right transition-opacity duration-500 ease-in-out`}
+        } bg-gray-200 p-4 lg:mr-24 xs:-ml-4 speech right transition-opacity duration-500 ease-in-out`}
       >
         Studying the client, offering them suitable solutions, signing
         agreements

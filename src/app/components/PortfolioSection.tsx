@@ -7,10 +7,10 @@ const PortfolioSection = () => {
   return (
     <div className="flex flex-col px-[6%] xs:mt-24 lg:mt-0">
       <p className="capitalize xs:text-[20px] lg:text-[40px] font-medium lg:pb-10 xs:pb-5">Portfolio</p>
-      <div className="grid grid-cols-2 xs:gap-4 lg:gap-10">
-        <Image priority={true} className=" xs:rounded-lg  lg:rounded-button" src={arken} alt="Arken Client" />
+      <div className="grid xs:grid-cols-1 lg:grid-cols-2 xs:gap-10 lg:gap-10">
+        <Image priority={true} className=" xs:rounded-lg  lg:rounded-button object-cover" src={arken} alt="Arken Client" />
         <Image priority={true} className="xs:rounded-lg  lg:rounded-button" src={ofiyat} alt="Ofiyat Client" />
-        <Image priority={true} className="xs:rounded-lg  lg:rounded-button" src={evomed} alt="Ofiyat Client" />
+        <Image priority={true} className="xs:rounded-lg object-cover lg:rounded-button" src={evomed} alt="Ofiyat Client" />
       </div>
       <div className="mt-10">
         <PrimaryBtn>

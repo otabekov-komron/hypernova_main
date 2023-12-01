@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import PrimaryBtn from "./components/buttons/PrimaryBtn";
 import SecondaryBtn from "./components/buttons/SecondaryBtn";
@@ -8,12 +9,19 @@ import PortfolioSection from "./components/PortfolioSection";
 import Clients from "./components/Clients";
 import ContactForm from "./components/ContactForm";
 import Roadmap from "./components/Roadmap";
+import Vacancies from "./components/Vacancies";
+import ParallaxComponent from "./components/ParallaxComponent";
+import {cubicBezier, motion} from 'framer-motion'
 export default function Home() {
   return (
     <div className="home">
       <div className="lg:pt-24 xs:pt-4 flex flex-col items-center">
         <div className="grid lg:grid-cols-main xs:grid-cols-1 2xl:flex 2xl:flex-row 2xl:w-full 2xl:justify-between ">
-          <div className="lg:ps-[15%] xs:ps-[5%] 2xl:ps-[5%]   flex flex-col gap-6">
+          <motion.div
+          initial={{ x: -45, opacity: 0}}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: cubicBezier(4, 4, 5, 4)  }}
+          className="lg:ps-[15%] xs:ps-[5%] 2xl:ps-[5%]   flex flex-col gap-6">
             <p className="lg:text-[25px] xs:w-[75%] lg:w-full xs:text-[16px] spacing-[48px] text-[#EBD9FC] font-medium ">
               Discover Innovation{" "}
               <span className="text-[#FBFAFF] font-bold">HYPERNOVA</span> Where
@@ -67,8 +75,8 @@ export default function Home() {
                 </p>
               </SecondaryBtn>
             </div>
-          </div>
-          <div className="flex flex-col items-center">
+          </motion.div>
+          {/* <div className="flex flex-col items-center">
             <Image
               className="lg:w-fit xs:w-[70%] xs:pt-10"
               src={text}
@@ -83,7 +91,8 @@ export default function Home() {
                 alt="main image"
               />
             </div>
-          </div>
+          </div> */}
+          <ParallaxComponent/>
         </div>
         <svg
           className="xs:hidden lg:block scroll opacity-40 relative bottom-[18vw] "
@@ -132,82 +141,85 @@ export default function Home() {
           </defs>
         </svg>
       </div>
-      <div>
-       <div className="xs:hidden lg:flex opacity-20 -z-10 absolute top-[60vw]">
-       <svg
-          
-          xmlns="http://www.w3.org/2000/svg"
-          width="379"
-          height="677"
-          viewBox="0 0 379 677"
-          fill="none"
-        >
-          <path
-            d="M-255.683 232.386C-116.919 67.1917 62.5909 2.36366 182.852 63.1776C208.027 75.9158 245.753 101.807 278.978 158.245C245.277 112.806 209.905 92.2398 186.027 82.1911C74.8831 35.3865 -75.3495 94.7286 -187.895 232.386H-255.683Z"
-            fill="url(#paint0_linear_239_1299)"
-          />
-          <path
-            d="M-281 404.351C-280.923 421.906 -278.866 516.238 -207.632 580.839C-166.873 617.796 -123.065 627.256 -104.871 630.935C-12.1011 649.708 62.3466 604.014 82.9966 590.312C-5.32492 632.367 -104.46 617.555 -164.777 555.055C-219.397 498.469 -222.072 423.659 -222.213 404.351H-281Z"
-            fill="url(#paint1_linear_239_1299)"
-          />
-          <path
-            d="M360.253 404.351C333.045 455.919 271.417 553.824 155.271 615.521C107.568 640.864 -38.9615 718.697 -162.9 646.323C-214.974 615.922 -244.509 569.827 -259.952 539.935C-243.069 566.107 -213.444 603.198 -166.243 626.319C-47.5507 684.47 82.6878 605.513 126.572 578.912C213.839 526.006 264.731 452.909 291.938 404.351H360.266H360.253Z"
-            fill="url(#paint2_linear_239_1299)"
-          />
-          <path
-            d="M379 233.055C375.695 212.824 353.387 87.9316 248.774 29.4592C186.285 -5.46363 124.618 0.182794 95.3658 3.26029C-42.0731 17.7245 -149.193 120.018 -147.907 122.159C-147.213 123.323 -69.2035 44.6726 52.2916 30.6633C98.4903 25.3379 178.506 17.7647 242.963 74.7519C305.748 130.254 313.206 211.647 314.53 232.386C336.016 232.614 357.514 232.828 379 233.055Z"
-            fill="url(#paint3_linear_239_1299)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_239_1299"
-              x1="-281"
-              y1="338.645"
-              x2="379"
-              y2="338.645"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#8D4B9D" />
-              <stop offset="1" stopColor="#4C1769" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_239_1299"
-              x1="379.023"
-              y1="324.644"
-              x2="-281"
-              y2="324.644"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#8D4B9D" />
-              <stop offset="1" stopColor="#4C1769" />
-            </linearGradient>
-            <linearGradient
-              id="paint2_linear_239_1299"
-              x1="342.745"
-              y1="336.697"
-              x2="-319.911"
-              y2="336.697"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#854496" />
-              <stop offset="1" stopColor="#612C8B" />
-            </linearGradient>
-            <linearGradient
-              id="paint3_linear_239_1299"
-              x1="-184.038"
-              y1="113.813"
-              x2="345.017"
-              y2="113.813"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#8D4B9D" />
-              <stop offset="1" stopColor="#4C1769" />
-            </linearGradient>
-          </defs>
-        </svg>
-       </div>
-        <AboutUs />
-        <Services />
+      <div className="pb-24">
+        <div className="xs:hidden lg:flex opacity-20 -z-10 absolute top-[60vw]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="379"
+            height="677"
+            viewBox="0 0 379 677"
+            fill="none"
+          >
+            <path
+              d="M-255.683 232.386C-116.919 67.1917 62.5909 2.36366 182.852 63.1776C208.027 75.9158 245.753 101.807 278.978 158.245C245.277 112.806 209.905 92.2398 186.027 82.1911C74.8831 35.3865 -75.3495 94.7286 -187.895 232.386H-255.683Z"
+              fill="url(#paint0_linear_239_1299)"
+            />
+            <path
+              d="M-281 404.351C-280.923 421.906 -278.866 516.238 -207.632 580.839C-166.873 617.796 -123.065 627.256 -104.871 630.935C-12.1011 649.708 62.3466 604.014 82.9966 590.312C-5.32492 632.367 -104.46 617.555 -164.777 555.055C-219.397 498.469 -222.072 423.659 -222.213 404.351H-281Z"
+              fill="url(#paint1_linear_239_1299)"
+            />
+            <path
+              d="M360.253 404.351C333.045 455.919 271.417 553.824 155.271 615.521C107.568 640.864 -38.9615 718.697 -162.9 646.323C-214.974 615.922 -244.509 569.827 -259.952 539.935C-243.069 566.107 -213.444 603.198 -166.243 626.319C-47.5507 684.47 82.6878 605.513 126.572 578.912C213.839 526.006 264.731 452.909 291.938 404.351H360.266H360.253Z"
+              fill="url(#paint2_linear_239_1299)"
+            />
+            <path
+              d="M379 233.055C375.695 212.824 353.387 87.9316 248.774 29.4592C186.285 -5.46363 124.618 0.182794 95.3658 3.26029C-42.0731 17.7245 -149.193 120.018 -147.907 122.159C-147.213 123.323 -69.2035 44.6726 52.2916 30.6633C98.4903 25.3379 178.506 17.7647 242.963 74.7519C305.748 130.254 313.206 211.647 314.53 232.386C336.016 232.614 357.514 232.828 379 233.055Z"
+              fill="url(#paint3_linear_239_1299)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_239_1299"
+                x1="-281"
+                y1="338.645"
+                x2="379"
+                y2="338.645"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#8D4B9D" />
+                <stop offset="1" stopColor="#4C1769" />
+              </linearGradient>
+              <linearGradient
+                id="paint1_linear_239_1299"
+                x1="379.023"
+                y1="324.644"
+                x2="-281"
+                y2="324.644"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#8D4B9D" />
+                <stop offset="1" stopColor="#4C1769" />
+              </linearGradient>
+              <linearGradient
+                id="paint2_linear_239_1299"
+                x1="342.745"
+                y1="336.697"
+                x2="-319.911"
+                y2="336.697"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#854496" />
+                <stop offset="1" stopColor="#612C8B" />
+              </linearGradient>
+              <linearGradient
+                id="paint3_linear_239_1299"
+                x1="-184.038"
+                y1="113.813"
+                x2="345.017"
+                y2="113.813"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#8D4B9D" />
+                <stop offset="1" stopColor="#4C1769" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div id="about">
+          <AboutUs />
+        </div>
+        <div id="services">
+          <Services />
+        </div>
         <div className="xs:hidden lg:flex justify-end relative bottom-[40vw]  opacity-20 -z-10 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -281,12 +293,17 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="lg:-mt-[35vw] ">
+        <div id="portfolio" className="lg:-mt-[35vw] ">
           <PortfolioSection />
         </div>
-        <Clients/>
-        <ContactForm/>
-        <Roadmap/>
+        <div id="clients">
+          <Clients />
+        </div>
+        <Roadmap />
+        <ContactForm />
+        <div id="vacancies">
+          <Vacancies />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,178 @@
+  const [message, setMessage] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  
+  const handleSubmit = async (e) => {
+    
+    e.preventDefault();
+
+    try {
+      const telegramBotToken = "6835382333:AAEMLjwkzhU9nrGEo_iNQprnk3MpC7vg_j0";
+      const chatId = "-1001869878240";
+
+      const text = `New Contact Form Submission:
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}
+
+      await axios.post(
+        `https://api.telegram.org/bot${telegramBotToken}/sendMessage`,
+        {
+          chat_id: chatId,
+          text,
+        }
+      );
+
+      setEmail("");
+      setName("");
+    setMessage("")
+
+      alert("All data sent successfully!");
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again later.");
+    }
+  };
+   <form onSubmit={handleSubmit}>
+                <div className="grid gap-5 mb-14 xs:px-5 lg:p-10 my-12 lg:mx-5 sm:grid-cols-2">
+                  <div className="my-2">
+                    <label
+                      htmlFor="Kompaniya nomini"
+                      className="block mb-2 lg:text-lg xs:text-sm lg:mx-5 font-medium text-white dark:text-white"
+                    >
+                      {t("form-company")}
+                    </label>
+                    <input
+                      type="text"
+                      name="companyName"
+                      id="companyName"
+                      value={companyName}
+                      onChange={(e) => setCompanyName(e.target.value)}
+                      className="border border-gray-300 text-black text-sm rounded-[6px] focus:ring-primary-600 focus:border-primary-600 block lg:w-[432px] xs:w-[300px]   lg:h-[46px] p-2.5"
+                      placeholder={t("form-company-pl")}
+                    />
+                    {message && <p className=" text-red-500">{message}</p>}
+                  </div>
+                  <div className="lg:my-2 lg:mx-5">
+                    <label
+                      htmlFor="Ismingizni yozing"
+                      className="block mb-2 lg:text-lg xs:text-sm lg:mx-5 font-medium text-white dark:text-white "
+                    >
+                      {t("form-surname")}
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      className="border border-gray-300 text-black text-sm rounded-[6px] focus:ring-primary-600 focus:border-primary-600 block lg:w-[432px] xs:w-[300px]   lg:h-[46px] p-2.5"
+                      placeholder={t("form-surname-pl")}
+                    />
+                    {message && <p className=" text-red-500">{message}</p>}
+                  </div>
+                  <div className="lg:my-6">
+                    <label
+                      htmlFor="phone"
+                      className="block mb-2 lg:text-lg xs:text-sm lg:mx-5 font-medium text-white dark:text-white "
+                    >
+                      {t("form-telephone")}
+                    </label>
+                    <input
+                      type="phone"
+                      name="phone"
+                      id="phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="border border-gray-300 text-black text-sm rounded-[6px] focus:ring-primary-600 focus:border-primary-600 block lg:w-[432px] xs:w-[300px]   lg:h-[46px] p-2.5"
+                      placeholder={t("form-telephone-pl")}
+                    />
+                    {message && <p className=" text-red-500">{message}</p>}
+                  </div>
+                  <div className="lg:my-6 lg:mx-5">
+                    <label
+                      htmlFor="category"
+                      className="block mb-2 lg:text-lg xs:text-sm lg:mx-5 font-medium text-white dark:text-white "
+                    >
+                      {t("form-type")}
+                    </label>
+                    <div className="select-wrapper ">
+                      <select
+                        id="projectType"
+                        value={projectType}
+                        onChange={(e) => setProjectType(e.target.value)}
+                        className="border border-gray-300 text-black text-sm rounded-[6px] focus:ring-primary-600 focus:border-primary-600 block lg:w-[432px] xs:w-[300px]   lg:h-[46px] p-2.5 select-dropdown"
+                        placeholder="Web-saytlar"
+                      >
+                        {message && <p className=" text-red-500">{message}</p>}
+                        <option
+                          className="xs:text-xs lg:text-base"
+                          selected={t("service-1")}
+                        >
+                          {t("service-1")}
+                        </option>
+                        <option className="xs:text-xs lg:text-base" value="CRM">
+                          CRM
+                        </option>
+                        <option
+                          className="lg:text-base  xs:text-xs"
+                          value={t("type-2")}
+                        >
+                          {t("type-2")}
+                        </option>
+                        <option
+                          className="xs:text-xs lg:text-base"
+                          value={t("service-3")}
+                        >
+                          {t("service-3")}
+                        </option>
+                        <option
+                          className="xs:text-xs lg:text-base"
+                          value={t("service-4")}
+                        >
+                          {t("service-4")}
+                        </option>
+                        <option
+                          className="xs:text-xs lg:text-base"
+                          value={t("service-5")}
+                        >
+                          {t("service-5")}
+                        </option>
+                        <option
+                          className="xs:text-xs lg:text-base"
+                          value={t("type-5")}
+                        >
+                          {t("type-5")}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="">
+                    <label
+                      htmlFor="Loyiha haqida"
+                      className="block mb-2 lg:text-lg xs:text-sm lg:mx-5 font-medium text-white dark:text-white "
+                    >
+                      {t("form-about")}
+                    </label>
+                    <textarea
+                      id="projectDescription"
+                      rows="5"
+                      value={projectDescription}
+                      onChange={(e) => setProjectDescription(e.target.value)}
+                      className="block p-2.5 text-sm text-black xs:w-full lg:w-[950px] h-[115px] bg-gray-50 rounded-[6px] border border-gray-300 focus:ring-primary-500"
+                      placeholder={`${t("form-about-pl")}...`}
+                    ></textarea>
+                    {message && <p className=" text-red-500">{message}</p>}
+                  </div>
+                </div>
+                <div className="flex xs:justify-center xs:-mt-6 xs:pb-10 lg:justify-end lg:items-end lg:mx-20 lg:relative lg:bottom-14">
+                  <button
+                    type="submit"
+                    className=" xs:w-[300px] lg:w-[200px] xs:p-2 lg:h-[47px] bg-white rounded-[6px] text-secondary lg:hover:bg-secondary lg:hover:text-white lg:hover:border-2 transition duration-150 ease-out lg:hover:ease-in font-semibold lg:self-end "
+                    onClick={handleSubmit}
+                  >
+                    {t("form-btn")}
+                  </button>
+                </div>
+              </form>

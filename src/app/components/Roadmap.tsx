@@ -11,9 +11,9 @@ import Step6 from "./steps/Step6";
 const Roadmap = () => {
 
   return (
-    <div className="flex flex-col px-[6%] mt-44">
-      <b className="text-[40px] ">Work progress</b>
-      <div className="flex flex-col items-center gap-10 py-24 ">
+    <div className="flex flex-col px-[6%] xs:mt-24 lg:mt-44">
+      <b className="lg:text-[40px] xs:text-[20px]">Work progress</b>
+      <div className="flex flex-col items-center gap-10 xs:py-[45px] lg:py-24 ">
         <Step1/>
         <Step2/>
         <Step3/>
