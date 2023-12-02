@@ -1,6 +1,55 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    message: '',
+    name: '',
+    email: '',
+  });
+
+  const { message, name, email } = formData;
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const telegramBotToken = '6835382333:AAEMLjwkzhU9nrGEo_iNQprnk3MpC7vg_j0';
+      const chatId = '-1001869878240';
+
+      const text = `New Contact Form Submission:
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}`;
+
+      await axios.post(
+        `https://api.telegram.org/bot${telegramBotToken}/sendMessage`,
+        {
+          chat_id: chatId,
+          text,
+        }
+      );
+
+      setFormData({
+        message: '',
+        name: '',
+        email: '',
+      });
+
+      alert('All data sent successfully!');
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again later.');
+    }
+  };
+
   return (
     <div className="lg:grid xs:flex xs:flex-col-reverse xs:gap-6 lg:gap-0  lg:grid-cols-2 px-[6%] xs:my-24 lg:my-24">
       <div className="bg-mainWhite text-secondary2 xs:pt-5 lg:pt-10 xs:rounded-button lg:rounded-s-button ">
@@ -160,12 +209,42 @@ const ContactForm = () => {
       </div>
       <div className="bg-secondary2 lg:-ml-5 text-mainWhite rounded-button xs:py-10 lg:py-0 flex flex-col items-center">
         <b className=" xs:text-[40px] lg:text-[64px]  lg:p-10">Get in Touch</b>
-        <form className="flex flex-col w-full xs:p-4 lg:p-7 gap-6  " action="POST">
-            <input className="lg:p-4 xs:p-3  outline-none text-primary xs:rounded-xl lg:rounded-2xl" type="text" required placeholder="Your name" /> 
-            <input className="lg:p-4 xs:p-3 outline-none text-primary xs:rounded-xl lg:rounded-2xl" type="email" required placeholder="Your email" /> 
-            <textarea className="lg:p-4 xs:p-3 outline-none text-primary rounded-2xl resize-none " rows={10} cols={50} name="text" id="text" placeholder="Your message"></textarea>
-            <button className=" xs:rounded-xl lg:rounded-button bg-[#EBD9FC] text-secondary1 lg:text-[20px] xs:text-[14px] xs:px-5 xs:py-2 self-end lg:mt-4  w-fit lg:px-[20px] lg:py-[12px] font-medium " type="submit">Send Message</button>
-        </form>
+        <form className="flex flex-col w-full xs:p-4 lg:p-7 gap-6" onSubmit={handleSubmit}>
+      <input
+        className="lg:p-4 xs:p-3 outline-none text-primary xs:rounded-xl lg:rounded-2xl"
+        type="text"
+        required
+        placeholder="Your name"
+        name="name"
+        value={name}
+        onChange={handleChange}
+      />
+      <input
+        className="lg:p-4 xs:p-3 outline-none text-primary xs:rounded-xl lg:rounded-2xl"
+        type="email"
+        required
+        placeholder="Your email"
+        name="email"
+        value={email}
+        onChange={handleChange}
+      />
+      <textarea
+        className="lg:p-4 xs:p-3 outline-none text-primary rounded-2xl resize-none"
+        rows={10}
+        cols={50}
+        name="message"
+        id="message"
+        placeholder="Your message"
+        value={message}
+        onChange={handleChange}
+      ></textarea>
+      <button
+        className="xs:rounded-xl lg:rounded-button bg-[#EBD9FC] text-secondary1 lg:text-[20px] xs:text-[14px] xs:px-5 xs:py-2 self-end lg:mt-4  w-fit lg:px-[20px] lg:py-[12px] font-medium"
+        type="submit"
+      >
+        Send Message
+      </button>
+    </form>
       </div>
     </div>
   );

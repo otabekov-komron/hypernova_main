@@ -56,3 +56,19 @@ a:focus {
     transform: translate(0);
   }
 }
+
+.menu-open {
+  overflow: hidden; /* Prevent scrolling when the menu is open */
+}
+
+/* Apply a blur effect to the entire body */
+.menu-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998; /* Ensure it's below the menu */
+  backdrop-filter: blur(10px); /* Adjust the blur strength as needed */
+}
