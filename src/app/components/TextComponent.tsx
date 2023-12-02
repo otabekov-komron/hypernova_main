@@ -12,7 +12,7 @@ const TextComponent = () => {
       transition={{ duration: 1 }}
     >
       <Image
-        className="lg:w-fit -z-10 xs:w-[70%] xs:pt-10 "
+        className="lg:w-fit xs:w-[70%] xs:pt-10"
         src={text}
         priority={true}
         alt="hypernova text"
