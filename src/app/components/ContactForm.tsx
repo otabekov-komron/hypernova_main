@@ -21,13 +21,13 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const telegramBotToken = '6835382333:AAEMLjwkzhU9nrGEo_iNQprnk3MpC7vg_j0';
+      const telegramBotToken = '6835382333:AAGiZSftW-BWkSx13jWP8Ba1DP2bi4aBLKk';
       const chatId = '-1001869878240';
 
       const text = `New Contact Form Submission:
-        Name: ${name}
-        Email: ${email}
-        Message: ${message}`;
+      Name: ${name}
+      Email: ${email}
+      Message: ${message}`;
 
       await axios.post(
         `https://api.telegram.org/bot${telegramBotToken}/sendMessage`,
