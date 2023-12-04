@@ -33,31 +33,31 @@ export default function RootLayout(
               <div className=" flex lg:flex-row xs:flex-col w-full justify-between">
                 <Link
                   className="uppercase text-[16px] font-normal "
-                  href="/about"
+                  href="/#about"
                 >
                   About us
                 </Link>
                 <Link
                   className="uppercase text-[16px] font-normal "
-                  href="/services"
+                  href="/#services"
                 >
                   Services
                 </Link>
                 <Link
                   className="uppercase text-[16px] font-normal "
-                  href="/portfolio"
+                  href="/#portfolio"
                 >
                   Portfolio
                 </Link>
                 <Link
                   className="uppercase text-[16px] font-normal "
-                  href="/clients"
+                  href="/#clients"
                 >
                   Clients
                 </Link>
                 <Link
                   className="uppercase text-[16px] font-normal "
-                  href="/vacancies"
+                  href="/#vacancies"
                 >
                   Vacancies
                 </Link>
@@ -89,7 +89,7 @@ export default function RootLayout(
                           fill="#FBFAFF"
                         />
                       </svg>
-                      <p>info@hypernova.uz</p>
+                      <a href="mailto:info@hypernova.uz">info@hypernova.uz</a>
                     </span>
                   </div>
                   <div className="uppercase flex flex-col gap-2">
@@ -117,7 +117,7 @@ export default function RootLayout(
                           fill="#FBFAFF"
                         />
                       </svg>
-                      <p>+ 998 95 240 51 11</p>
+                      <a href="tel:+998952405111">+ 998 95 240 51 11</a>
                     </span>
                   </div>
                 </div>
@@ -250,7 +250,7 @@ export default function RootLayout(
                     fill="#FBFAFF"
                   />
                 </svg>
-                Toshkent shahar. Mirzo Ulug‘bek tumani Amir timur ko‘chasi 12/34
+                Toshkent shahar. Chilonzor tumani Gagarin ko‘chasi 25
               </div>
             </div>
           </div>

@@ -96,8 +96,8 @@ const Step5 = () => {
             : "opacity-0 invisible"
         } bg-gray-200 p-4 lg:ml-24 xs:-ml-4 speech left transition-opacity duration-500 ease-in-out`}
       >
-        Studying the client, offering them suitable solutions, signing
-        agreements
+        Comprehensive testing of the finished project and preparing it for
+        market entry.
       </div>
     </div>
   );

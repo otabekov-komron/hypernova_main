@@ -75,8 +75,8 @@ const Step4 = () => {
             : "opacity-0 invisible"
         } bg-gray-200 p-4 lg:mr-24 xs:-ml-4 speech right transition-opacity duration-500 ease-in-out`}
       >
-        Studying the client, offering them suitable solutions, signing
-        agreements
+        Once the design is approved, move on to the code portion of the project
+        and complete it.
       </div>
     </div>
   );

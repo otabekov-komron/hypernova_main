@@ -60,7 +60,7 @@ const Step2 = () => {
           isMobile ? 'visible opacity-100 left' : showStep2 ? 'opacity-100' : 'opacity-0 invisible'
         } bg-gray-200 p-4 lg:mr-24 xs:-ml-4 speech right transition-opacity duration-500 ease-in-out`}
       >
-        Studying the client, offering them suitable solutions, signing agreements
+        Show the client the approximate view of the project, visually confirm it with a presentation and sign the contract between the two parties.
       </div>
     </div>
   );

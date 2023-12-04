@@ -3,14 +3,16 @@ import React, { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    message: '',
-    name: '',
-    email: '',
+    message: "",
+    name: "",
+    email: "",
   });
 
   const { message, name, email } = formData;
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -21,8 +23,8 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      const telegramBotToken = '6835382333:AAGiZSftW-BWkSx13jWP8Ba1DP2bi4aBLKk';
-      const chatId = '-1001869878240';
+      const telegramBotToken = "6835382333:AAGiZSftW-BWkSx13jWP8Ba1DP2bi4aBLKk";
+      const chatId = "-1001869878240";
 
       const text = `New Contact Form Submission:
       Name: ${name}
@@ -38,22 +40,24 @@ const ContactForm = () => {
       );
 
       setFormData({
-        message: '',
-        name: '',
-        email: '',
+        message: "",
+        name: "",
+        email: "",
       });
 
-      alert('All data sent successfully!');
+      alert("All data sent successfully!");
     } catch (error) {
-      console.error('Error sending message:', error);
-      alert('Failed to send message. Please try again later.');
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again later.");
     }
   };
 
   return (
     <div className="lg:grid xs:flex xs:flex-col-reverse xs:gap-6 lg:gap-0  lg:grid-cols-2 px-[6%] xs:my-24 lg:my-24">
       <div className="bg-mainWhite text-secondary2 xs:pt-5 lg:pt-10 xs:rounded-button lg:rounded-s-button ">
-        <b className="xs:text-[30px] lg:text-[64px] xs:p-5 lg:p-10">Contact us</b>
+        <b className="xs:text-[30px] lg:text-[64px] xs:p-5 lg:p-10">
+          Contact us
+        </b>
         <div className="flex flex-col xs:p-5 lg:p-10 xs:text-[14px] lg:text-[24px]">
           <div className="flex flex-col xs:gap-2 lg:gap-4 ">
             <b>Email</b>
@@ -79,7 +83,7 @@ const ContactForm = () => {
                   />
                 </svg>
               </span>
-              <span>HyperNova@gmail.com</span>
+              <a href="mailto:info@hypernova.uz">info@hypernova.uz</a>
             </span>
           </div>
           <div className="flex flex-col xs:gap-2 lg:gap-4">
@@ -106,7 +110,7 @@ const ContactForm = () => {
                   />
                 </svg>
               </span>
-              <span>+ 998 71 345 12 12</span>
+              <a href="tel:+998952405111">+ 998 95 240 51 11</a>
             </span>
           </div>
           <div className="flex flex-col gap-4">
@@ -129,8 +133,8 @@ const ContactForm = () => {
                   />
                 </svg>
               </span>
-              <span>
-                Toshkent shahar. Mirzo Ulug‘bek tumani Amir timur ko‘chasi 12/34
+              <span className="w-[80%]">
+                Toshkent shahar. Chilonzor tumani Gagarin ko‘chasi 25
               </span>
             </span>
           </div>
@@ -209,42 +213,45 @@ const ContactForm = () => {
       </div>
       <div className="bg-secondary2 lg:-ml-5 text-mainWhite rounded-button xs:py-10 lg:py-0 flex flex-col items-center">
         <b className=" xs:text-[40px] lg:text-[64px]  lg:p-10">Get in Touch</b>
-        <form className="flex flex-col w-full xs:p-4 lg:p-7 gap-6" onSubmit={handleSubmit}>
-      <input
-        className="lg:p-4 xs:p-3 outline-none text-primary xs:rounded-xl lg:rounded-2xl"
-        type="text"
-        required
-        placeholder="Your name"
-        name="name"
-        value={name}
-        onChange={handleChange}
-      />
-      <input
-        className="lg:p-4 xs:p-3 outline-none text-primary xs:rounded-xl lg:rounded-2xl"
-        type="email"
-        required
-        placeholder="Your email"
-        name="email"
-        value={email}
-        onChange={handleChange}
-      />
-      <textarea
-        className="lg:p-4 xs:p-3 outline-none text-primary rounded-2xl resize-none"
-        rows={10}
-        cols={50}
-        name="message"
-        id="message"
-        placeholder="Your message"
-        value={message}
-        onChange={handleChange}
-      ></textarea>
-      <button
-        className="xs:rounded-xl lg:rounded-button bg-[#EBD9FC] text-secondary1 lg:text-[20px] xs:text-[14px] xs:px-5 xs:py-2 self-end lg:mt-4  w-fit lg:px-[20px] lg:py-[12px] font-medium"
-        type="submit"
-      >
-        Send Message
-      </button>
-    </form>
+        <form
+          className="flex flex-col w-full xs:p-4 lg:p-7 gap-6"
+          onSubmit={handleSubmit}
+        >
+          <input
+            className="lg:p-4 xs:p-3 outline-none text-primary xs:rounded-xl lg:rounded-2xl"
+            type="text"
+            required
+            placeholder="Your name"
+            name="name"
+            value={name}
+            onChange={handleChange}
+          />
+          <input
+            className="lg:p-4 xs:p-3 outline-none text-primary xs:rounded-xl lg:rounded-2xl"
+            type="email"
+            required
+            placeholder="Your email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
+          <textarea
+            className="lg:p-4 xs:p-3 outline-none text-primary rounded-2xl resize-none"
+            rows={10}
+            cols={50}
+            name="message"
+            id="message"
+            placeholder="Your message"
+            value={message}
+            onChange={handleChange}
+          ></textarea>
+          <button
+            className="xs:rounded-xl lg:rounded-button bg-[#EBD9FC] text-secondary1 lg:text-[20px] xs:text-[14px] xs:px-5 xs:py-2 self-end lg:mt-4  w-fit lg:px-[20px] lg:py-[12px] font-medium"
+            type="submit"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
     </div>
   );

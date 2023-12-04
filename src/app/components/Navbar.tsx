@@ -43,10 +43,10 @@ const Navbar = () => {
           Vacancies
         </Link>
       </div>
-      <p className="lg:flex xs:hidden gap-1 text-[16px] font-medium  ">
+      <a href="tel:+998952405111" className="lg:flex xs:hidden gap-1 text-[16px] font-medium  ">
         <span className="opacity-60">+998 95</span>
         <span>240 51 11</span>
-      </p>
+      </a>
       <button onClick={toggleMenu} className="xs:flex lg:hidden ">
         <svg
           xmlns="http://www.w3.org/2000/svg"

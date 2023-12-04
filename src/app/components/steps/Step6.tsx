@@ -85,8 +85,8 @@ const Step6 = () => {
             : "opacity-0 invisible"
         } bg-gray-200 p-4 lg:mr-24 xs:-ml-4 speech right transition-opacity duration-500 ease-in-out`}
       >
-        Studying the client, offering them suitable solutions, signing
-        agreements
+        Delivery of a completely finished project to the client and receiving
+        feedback from the client to improve the quality of work.
       </div>
     </div>
   );
