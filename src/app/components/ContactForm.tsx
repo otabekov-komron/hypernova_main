@@ -83,7 +83,7 @@ const ContactForm = () => {
                   />
                 </svg>
               </span>
-              <a href="mailto:info@hypernova.uz">info@hypernova.uz</a>
+              <a href="mailto:hypernova.uz@gmail.com">hypernova.uz@gmail.com</a>
             </span>
           </div>
           <div className="flex flex-col xs:gap-2 lg:gap-4">

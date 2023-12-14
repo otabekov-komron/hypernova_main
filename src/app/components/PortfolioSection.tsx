@@ -6,11 +6,34 @@ import { arken, evomed, ofiyat } from "@/assets/images";
 const PortfolioSection = () => {
   return (
     <div className="flex flex-col px-[6%] xs:mt-24 lg:mt-0">
-      <p className="capitalize xs:text-[20px] lg:text-[40px] font-medium lg:pb-10 xs:pb-5">Portfolio</p>
+      <p className="capitalize xs:text-[20px] lg:text-[40px] font-medium lg:pb-10 xs:pb-5">
+        Portfolio
+      </p>
       <div className="grid xs:grid-cols-1 lg:grid-cols-2 xs:gap-10 lg:gap-10">
-        <Image priority={true} className=" xs:rounded-lg  lg:rounded-button object-cover" src={arken} alt="Arken Client" />
-        <Image priority={true} className="xs:rounded-lg  lg:rounded-button" src={ofiyat} alt="Ofiyat Client" />
-        <Image priority={true} className="xs:rounded-lg object-cover lg:rounded-button" src={evomed} alt="Ofiyat Client" />
+        <a target="_blank" href="https://arkengenerator.uz">
+          <Image
+            priority={true}
+            className=" xs:rounded-lg  lg:rounded-button object-cover"
+            src={arken}
+            alt="Arken Client"
+          />
+        </a>
+        <a target="_blank" href="https://ofiyatmed.com">
+          <Image
+            priority={true}
+            className="xs:rounded-lg  lg:rounded-button"
+            src={ofiyat}
+            alt="Ofiyat Client"
+          />
+        </a>
+        <a target="_blank" href="https://evomed.uz">
+          <Image
+            priority={true}
+            className="xs:rounded-lg object-cover lg:rounded-button"
+            src={evomed}
+            alt="Ofiyat Client"
+          />
+        </a>
       </div>
       <div className="mt-10">
         <PrimaryBtn>
